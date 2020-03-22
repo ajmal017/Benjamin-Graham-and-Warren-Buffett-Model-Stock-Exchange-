@@ -180,7 +180,7 @@ for i in range(0,len(links)):
     soup = BeautifulSoup(pageold.text, 'html.parser')
     about=soup.findAll('table')
     about=str(about)
-    a=re.findall('<td class="hed" colspan="1" width="40%">Total Assets</td>\n.*</td>',about)
+    a=re.findall('<td>Total Assets</td>\n.*</td>',about)
     totas=re.findall('>[0-9].*<',str(a))
     totas=totas[0][1:len(totas[0])-1]
     if(len(totas)>6):
