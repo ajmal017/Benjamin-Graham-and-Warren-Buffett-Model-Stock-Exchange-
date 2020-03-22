@@ -252,7 +252,7 @@ for i in range(0,len(links_pl)):
     soup = BeautifulSoup(pageold.text, 'html.parser')
     about=soup.findAll('table')
     about=str(about)
-    a=re.findall('<td class="det" colspan="1" width="40%">Basic EPS.*</td>\n.*</td>',about)
+    a=re.findall('<td>Basic EPS.*</td>\n.*</td>',about)
     eps=re.findall('>[0-9].*<',str(a))
     eps=eps[0][1:len(eps[0])-1]
     if(len(eps)>6):
