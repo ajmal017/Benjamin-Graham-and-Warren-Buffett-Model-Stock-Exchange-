@@ -100,7 +100,7 @@ for i in range(0,len(filterder)):
     netsales_list.remove(filtersales[i])
 
 
-''' Scraping Interesr Coverage Ratio '''
+''' Scraping Interest Coverage Ratio '''
 #links for ratio page
 linkso_r=[]
 for i in range(0,len(linkso)):
