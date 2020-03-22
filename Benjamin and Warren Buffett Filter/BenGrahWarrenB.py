@@ -114,7 +114,7 @@ for i in range(0,len(linkso_r)):
     soup = BeautifulSoup(pageold.text, 'html.parser')
     about=soup.findAll('table')
     about=str(about)
-    a=re.findall('<td class="det" colspan="1" width="40%">Interest Cover</td>\n.*</td>',about)
+    a=re.findall('<td>Interest Cover</td>\n.*</td>',about)
     icr=re.findall('>[0-9].*<',str(a))
     icr=icr[0][1:len(icr[0])-1]
     if(len(icr)>6):
