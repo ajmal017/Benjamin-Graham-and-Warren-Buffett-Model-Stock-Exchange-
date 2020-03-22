@@ -28,7 +28,7 @@ for i in range(0,len(linkso_pl)):
     soup = BeautifulSoup(pageold.text, 'html.parser')
     about=soup.findAll('table')
     about=str(about)
-    a=re.findall('<td class="det" colspan="1" width="40%">Net Sales</td>\n.*</td>',about)
+    a=re.findall('<td>Net Sales</td>\n.*</td>',about)
     netsales=re.findall('>[0-9].*<',str(a))
     netsales=netsales[0][1:len(netsales[0])-1]
     if(len(netsales)>6):
