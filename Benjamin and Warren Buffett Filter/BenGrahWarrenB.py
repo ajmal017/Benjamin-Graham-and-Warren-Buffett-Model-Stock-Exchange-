@@ -236,7 +236,7 @@ for i in range(0,len(links_r)):
     else:
         pricbv.append(float(pbv))
         
-    a=re.findall('<td class="det" colspan="1" width="40%">Book Value.*/Share.*</td>\n.*</td>',about)
+    a=re.findall('<td>Book Value.*/Share.*</td>\n.*</td>',about)
     a=a[0]
     pbvs=re.findall('>[0-9].*<',str(a))
     pbvs=pbvs[0][1:len(pbvs[0])-1]
