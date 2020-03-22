@@ -198,7 +198,7 @@ for i in range(0,len(links)):
     else:
         noncurrent_lia.append(float(totncl))
     
-    a=re.findall('<td class="hed" colspan="1" width="40%">Total Current Liabilities</td>\n.*</td>',about)
+    a=re.findall('<td>Total Current Liabilities</td>\n.*</td>',about)
     totcl=re.findall('>[0-9].*<',str(a))
     totcl=totcl[0][1:len(totcl[0])-1]
     if(len(totcl)>6):
