@@ -227,7 +227,7 @@ for i in range(0,len(links_r)):
     soup = BeautifulSoup(pageold.text, 'html.parser')
     about=soup.findAll('table')
     about=str(about)
-    a=re.findall('<td class="det" colspan="1" width="40%">Price/BV.*</td>\n.*</td>',about)
+    a=re.findall('<td>Price/BV.*</td>\n.*</td>',about)
     pbv=re.findall('>[0-9].*<',str(a))
     pbv=pbv[0][1:len(pbv[0])-1]
     if(len(pbv)>6):
