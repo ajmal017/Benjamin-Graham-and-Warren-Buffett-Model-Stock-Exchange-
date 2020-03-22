@@ -70,7 +70,7 @@ for i in range(0,len(linkso_r)):
     soup = BeautifulSoup(pageold.text, 'html.parser')
     about=soup.findAll('table')
     about=str(about)
-    a=re.findall('<td class="det" colspan="1" width="40%">Debt Equity Ratio</td>\n.*</td>',about)
+    a=re.findall('<td>Debt Equity Ratio</td>\n.*</td>',about)
     der=re.findall('>[0-9].*<',str(a))
     if(len(der)==0):
         der=0
