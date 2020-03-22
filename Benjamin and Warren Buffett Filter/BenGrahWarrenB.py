@@ -2,7 +2,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 import pandas as pd
-data=pd.read_csv(r"C:\Users\ketan\Desktop\VITH-C1\Challenge1.csv")
+data=pd.read_csv("Companies.csv")
 companynames=list(data.iloc[:,0])
 links=list(data.iloc[:,1])
 import numpy as np
