@@ -189,7 +189,7 @@ for i in range(0,len(links)):
     else:
         tot_assets.append(float(totas))
     
-    a=re.findall('<td class="hed" colspan="1" width="40%">Total Non-Current Liabilities</td>\n.*</td>',about)
+    a=re.findall('<td>Total Non-Current Liabilities</td>\n.*</td>',about)
     totncl=re.findall('>[0-9].*<',str(a))
     totncl=totncl[0][1:len(totncl[0])-1]
     if(len(totncl)>6):
