@@ -161,7 +161,7 @@ for i in range(0,len(links_pl)):
     soup = BeautifulSoup(pageold.text, 'html.parser')
     about=soup.findAll('table')
     about=str(about)
-    a=re.findall('<td class="hed" colspan="1" width="40%">Total Revenue</td>\n.*</td>',about)
+    a=re.findall('<td>Total Revenue</td>\n.*</td>',about)
     ti=re.findall('>[0-9].*<',str(a))
     ti=ti[0][1:len(ti[0])-1]
     if(len(ti)>6):
